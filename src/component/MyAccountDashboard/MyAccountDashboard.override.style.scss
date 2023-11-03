@@ -1,0 +1,58 @@
+.MyAccountDashboard {
+    // TODO style the element
+
+    &-CustomerData {
+        border-block-end: 2px solid #DDD8D8;
+        padding-block-end: 10px;
+
+        td {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        th {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .Button {
+            background: #DDD8D8;
+            box-shadow: 0px 1px 1px #0000000D;
+            color: var(--secondary-base-color);
+            border-color: #DDD8D8;
+            inset-inline-end: 0;
+            inset-inline-start: auto;
+
+            &_isWithoutBorder {
+                border: 1px solid var(--color-black);
+                box-shadow: 0px 1px 1px #0000000D;
+                background: var(--my-account-background);
+            }
+        }
+    }
+
+    table {
+        thead {
+            th {
+                color: var(--secondary-base-color);
+                background-color: transparent;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+
+        tbody {
+            tr {
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+
+                th {
+                    &::after {
+                        content: ':';
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "@vested/scandipwa-identity",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "devDependencies": {},
+    "author": "",
+    "license": "ISC",
+    "scandipwa": {
+        "type": "extension"
+    }
+}

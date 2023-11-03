@@ -1,0 +1,17 @@
+.Menu {
+    // TODO style the element
+
+    &-MenuWrapper {
+        @include desktop {
+            margin-block-start: 20px;
+            box-shadow: 0 3px 6px #00000029;
+        }
+    }
+
+    &-SubCategories {
+        @include desktop {
+            display: flex;
+        }
+    }
+
+}

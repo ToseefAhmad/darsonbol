@@ -1,0 +1,81 @@
+{
+    "name": "sonbol-pwa",
+    "version": "0.0.1",
+    "license": "OSL-3.0",
+    "dependencies": {
+        "@emotion/react": "^11.10.0",
+        "@emotion/styled": "^11.10.0",
+        "@mui/icons-material": "^5.8.4",
+        "@mui/material": "^5.10.1",
+        "@scandipwa/eslint-config": "0.1.36",
+        "@scandipwa/scandipwa": "5.2.4",
+        "@scandipwa/scandipwa-scripts": "2.4.19",
+        "@scandiweb/mageplaza-product-label": "file:packages/scandiweb-mageplaza-product-label",
+        "@tilework/mosaic": "0.1.4",
+        "@tilework/mosaic-craco": "0.0.5",
+        "@vested/scandi-advanced-pagebuilder": "file:packages/vested-scandi-advanced-pagebuilder",
+        "@vested/scandipwa-identity": "file:packages/vested-scandipwa-identity",
+        "http-proxy-middleware": "^2.0.2",
+        "magearab-scandipwa-initconfig": "file:packages/magearab-scandipwa-initconfig",
+        "magearab-scandipwa-menu": "file:packages/magearab-scandipwa-menu",
+        "magearab-scandipwa-sizechart": "file:packages/magearab-scandipwa-sizechart",
+        "magearab-scandipwa-tamara": "file:packages/magearab-scandipwa-tamara",
+        "postcss": "8.4.5",
+        "react-dom": "^17.0.2",
+        "react-image-magnify": "^2.7.4",
+        "react-image-zoom": "^1.3.1",
+        "react-modal": "^3.15.1",
+        "react-multi-carousel": "^2.8.2",
+        "react-otp-input": "^2.4.0",
+        "react-phone-input-2": "^2.15.1",
+        "react-slick": "^0.29.0",
+        "react-step-progress-bar": "^1.0.3",
+        "react-swipeable-views": "^0.14.0",
+        "slick-carousel": "^1.8.1",
+        "swiper": "^7.4.1"
+    },
+    "scandipwa": {
+        "type": "theme",
+        "locales": {
+            "en_US": true,
+            "ar_SA": true
+        },
+        "parentTheme": "@scandipwa/scandipwa",
+        "extensions": {
+            "magearab-scandipwa-initconfig": true,
+            "magearab-scandipwa-menu": true,
+            "@vested/scandipwa-identity": true,
+            "@vested/scandi-advanced-pagebuilder": true,
+            "@scandiweb/mageplaza-product-label": true,
+            "magearab-scandipwa-sizechart": true,
+            "magearab-scandipwa-tamara": false,
+            "@vested/scandi-enhanced-checkout": false
+        }
+    },
+    "scripts": {
+        "start": "scandipwa-scripts start",
+        "build": "scandipwa-scripts build",
+        "postinstall": "scandipwa-scripts link",
+        "postupdate": "scandipwa-scripts link"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa"
+    },
+    "proxy": "https://dev.darsonbol.online/",
+    "devDependencies": {
+        "i18n-extract": "^0.6.7",
+        "tslint-lines-between-class-members": "^1.3.6"
+    }
+}

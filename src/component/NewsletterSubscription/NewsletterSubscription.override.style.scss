@@ -1,0 +1,27 @@
+.NewsletterSubscription {
+    // TODO style the element
+
+    .FieldForm {
+        &-Body {
+            display: flex;
+        }
+
+        &-Fieldset {
+            .Field {
+                input {
+                    background-color: #fff;
+                    border: 1px solid var(--hollow-button-border);
+                    border-radius: 0px 4px 4px 0px;
+                    opacity: .5;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
+    .Button {
+        margin-block-start: 0;
+        border-radius: 4px 0px 0px 4px;
+        width: auto;
+    }
+}

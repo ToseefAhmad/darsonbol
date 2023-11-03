@@ -1,0 +1,9 @@
+.MyAccountTabList {
+    // TODO style the element
+    @include desktop {
+        background-color: unset;
+        border: none;
+        padding-block: 12px;
+        order: 1;
+    }
+}

@@ -1,0 +1,111 @@
+.shipping-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 245px;
+
+    @include desktop {
+        margin-block-start: -10px;
+    }
+
+    .shipping-heading {
+        .shipping-heading__text {
+            font: normal normal 300 15px/42px TheSansArab;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+
+        .shipping-heading__text-bold {
+            font: normal normal 900 15px/42px TheSansArab;
+            letter-spacing: 0px;
+            color: #000000;
+            padding-inline-end: 3px;
+        }
+    }
+
+    .shipping.link {
+        font: normal normal 300 10px/42px TheSansArab;
+        letter-spacing: 0px;
+        color: #55BD79;
+    }
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+
+    .InitConfig {
+        z-index: -5;
+        filter: blur(4px);
+    }
+
+    .ReactModal__Overlay--after-open {
+        padding-inline: 20px;
+
+        .ReactModal__Content {
+            .close-city-btn-container {
+                >button {
+                    width: 100%;
+                }
+            }
+
+            .filterhead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .txtfilhd {
+                    text-align: start;
+                }
+
+                .txtfiltracors {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .city-selector {
+                .shipping-city__content-wrapper {
+                    padding-block-start: 15px;
+                    
+                    .shipping-city {
+                        .shipping-city__field {
+                            border-bottom: 1px solid #E4E2E4;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-block-end: 15px;
+                            padding-block-end: 5px;
+
+                            &:last-child {
+                                border-bottom: none;
+                            }
+
+                            .Shipping-city__title {
+                                font: normal normal 300 14px/22px $font-muli;
+                                letter-spacing: -0.34px;
+                                color: #000000;
+
+                                &.hover {
+                                    font: normal normal bold 14px/22px $font-muli-bold;
+                                }
+                            }
+
+                            .Shipping-city__btn {
+                                background: white;
+                                min-height: 14px;
+                                padding: 0;
+                                min-width: 14px;
+                                border: 1px solid;
+
+                                &.select {
+                                    background: #5A8A89 0% 0% no-repeat padding-box;
+                                    color: #5A8A89;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

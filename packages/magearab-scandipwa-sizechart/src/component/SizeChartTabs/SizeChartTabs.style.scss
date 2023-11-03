@@ -1,0 +1,30 @@
+/*!
+ * Copyright (c) 2022. Shaymaa Saied
+ */
+
+.SizeChartTabs {
+    display: none;
+    border-block-end: 1px solid var(--secondary-base-color);
+
+    @include desktop {
+        display: flex;
+    }
+
+    &-Wrapper {
+        @include mobile {
+            padding: 0;
+        }
+
+        .ExpandableContent-Heading {
+            text-transform: uppercase;
+        }
+
+        .ExpandableContent {
+            border-block-end: 0;
+        }
+
+        & > :first-child {
+            border-block-start: 0;
+        }
+    }
+}

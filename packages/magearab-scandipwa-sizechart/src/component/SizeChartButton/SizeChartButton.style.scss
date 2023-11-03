@@ -1,0 +1,48 @@
+.SizeChartButton {
+    margin-block-start: 20px;
+    margin-inline-end: 10px;
+    margin-inline-start: auto;
+
+    @include desktop {
+        margin-inline-end: 50px;
+    }
+
+    &-Button {
+        text-decoration: underline;
+        cursor: pointer;
+        width: max-content;
+
+        span {
+            margin-inline-start: 10px;
+        }
+    }
+}
+
+@include mobile {
+    .SizeChartPopup {
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        height: 100%;
+        bottom: 0;
+        z-index: 999;
+    }
+
+    .Popup-Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+
+        h3.Popup-Heading {
+            margin-bottom: 0px;
+            font-size: 18px;
+            font-family: 'TheSansArab-Bold'
+        }
+
+        .Popup-CloseBtn {
+            position: relative;
+            inset: initial;
+        }
+    }
+}

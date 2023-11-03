@@ -1,0 +1,623 @@
+.ProductCard {
+    // TODO style the element
+    border-radius: 5px;
+    border: var(--card-border) solid #50545926;
+    margin-block-end: 26px;
+
+    .ProductCard-Picture {
+        padding-block-end: 152%;
+    }
+
+    &:hover {
+        @include desktop {
+            box-shadow: none;
+            z-index: unset;
+        }
+    }
+
+    &-FigureReview {
+        @include desktop {
+            padding-inline: 0;
+            padding-block-start: 0;
+        }
+
+        position: relative;
+    }
+
+    &-ProductActions {
+        position: absolute;
+        z-index: 1;
+        inset-inline-end: 0;
+        padding-block-start: 10px;
+
+        .HeartIcon {
+            stroke: #fff;
+            fill: #fff;
+        }
+    }
+
+    // .ProductActions-AttributesWrapper {
+    //     position: absolute;
+    //     z-index: 5;
+    //     inset-block-end: 0;
+    // }
+
+    .Image-Image {
+        object-fit: fill;
+    }
+
+    &-Name {
+        color: var(--secondary-base-color);
+    }
+
+    &-Price {
+        @include desktop {
+            font-size: 20px;
+        }
+    }
+
+    .ProductPrice-PriceValue {
+        @include desktop {
+            line-height: 20px;
+        }
+    }
+
+    .ProductPrice {
+        @include desktop {
+            min-height: 30px;
+        }
+    }
+
+    .ProductCard-Link {
+        .ProductCard-FigureReview {
+            .mpproductlabel-label {
+                .mpproductlabel-text-label {
+                    width: auto;
+                }
+            }
+        }
+
+        .ProductCard-Content {
+            padding: 1px 8px 5px;
+
+            .ProductCard-Name {
+                font-size: 12px;
+                letter-spacing: -0.29px;
+                color: #505459;
+                margin: 0px 0px;
+                padding-block-end: 0px;
+            }
+
+            @include mobile {
+                .ProductCard-Name {
+                    max-width: 120px;
+                }
+            }
+
+            @include desktop {
+                .ProductCard-Name {
+                    max-width: 132px;
+                }
+            }
+
+            @include desktop {
+                .ProductCard-Name {
+                    max-width: 130px;
+                }
+            }
+
+            .Button.AddToCart {
+                width: 40px;
+                height: 40px;
+                min-width: auto;
+
+                &:hover {
+                    border-radius: 50%;
+                }
+            }
+
+            .ProductCard-PriceWrapper {
+                float: inline-start;
+
+                .ProductPrice {
+                    min-height: auto;
+                    line-height: normal;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-direction: row-reverse;
+
+                    .ProductPrice-HighPrice {
+                        margin-inline-start: 4px;
+                        margin-inline-end: 0px;
+                    }
+
+                    .ProductPrice-Price {
+                        .ProductPrice-PriceBadge {
+                            display: none;
+                        }
+
+                        .ProductPrice-PriceValue {
+                            font-size: 16px;
+                            font-family: $font-muli_bold;
+                            font-weight: 100;
+                            letter-spacing: -0.39px;
+                            line-height: normal;
+                            margin-block-start: 0px;
+
+                            .pricevalue {
+                                font-size: 16px;
+                                font-family: $font-muli_bold;
+                                font-weight: 100;
+                                letter-spacing: -0.39px;
+                                line-height: normal;
+                                margin-block-start: 0px;
+                                margin-inline-end: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .product-list {
+        .CategoryPage-ProductListWrapper {
+            .ProductList {
+                .ProductListPage {
+                    max-width: 810px;
+
+                    .ProductCard_layout_list {
+                        .ProductCard-Link {
+                            width: 100%;
+
+                            .ProductCard-Link {
+                                width: 100%;
+
+                                .ProductCard-FigureReview {
+                                    width: 165px;
+
+                                    .ProductCard-Figure {
+                                        .Image {
+                                            width: 165px;
+                                        }
+                                    }
+                                }
+
+                                .ProductCard-Content {
+                                    padding: 12px 0 0 25px;
+                                    width: 100%;
+                                    max-width: 100%;
+
+                                    .ProductCard-MainInfo {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+
+                                        .ProductCard-Name {
+                                            font: normal normal bold 20px/25px $font-muli_bold;
+                                            letter-spacing: -0.48px;
+                                            color: #505459;
+                                            opacity: 1;
+                                        }
+
+                                        .ProductCard-AttributeWrapper {
+                                            .ProductCard-PriceWrapper {
+                                                .ProductPrice {
+                                                    .ProductPrice-Price {
+                                                        .ProductPrice-PriceValue {
+                                                            font-family: $font-muli_bold;
+                                                            letter-spacing: -0.63px;
+                                                            color: #11171f;
+                                                            opacity: 1;
+                                                            font-size: 26px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .ProductCard-ActionWrapper {
+                                        align-items: flex-end;
+                                        display: flex;
+                                        flex-direction: row-reverse;
+
+                                        .configrationOption-conatiner {
+                                            display: block;
+                                            width: 100%;
+
+                                            .ProductActions-AttributesWrapper {
+                                                position: relative;
+
+                                                .ProductConfigurableAttributes {
+                                                    .size {
+                                                        display: block;
+                                                    }
+                                                }
+                                            }
+
+                                            .AddToCart_layout_list {
+                                                position: absolute;
+                                                inset-inline-end: -20px;
+                                                inset-block-end: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ProductCard_layout_grid {
+    .ProductCard-Content {
+        display: block;
+
+        .configrationOption-conatiner {
+            margin-inline-start: auto;
+            position: initial;
+            width: 100%;
+            max-width: 40px;
+            margin-block-start: -10px;
+            float: inline-end;
+
+            .ProductActions-AttributesWrapper {
+                position: initial;
+
+                @include mobile {
+                    pointer-events: none;
+                    margin-block-end: 0px;
+                }
+            }
+
+            .ProductConfigurableAttributes {
+                position: initial;
+
+                .color {
+                    position: absolute;
+                    inset-inline-end: 0;
+                    inset-block-end: calc(0px + 55px);
+                    width: 100%;
+
+                    .ProductConfigurableAttributes-SwatchList {
+                        margin-block-start: 0px;
+                        margin-block-end: 0px;
+
+                        .ProductAttributeValue {
+                            .ProductAttributeValue-Image {
+                                width: 21px;
+                                height: 21px;
+                                min-height: 21px;
+                            }
+
+                            .ProductAttributeValue-Image-Overlay {
+                                &::before {
+                                    height: 22px;
+                                    width: 22px;
+                                    inset-block-start: -1px;
+                                    inset-inline-start: -1px;
+                                }
+
+                                &::after {
+                                    inset-block-start: 6px;
+                                    inset-inline-start: 3px;
+                                }
+                            }
+
+                            .ProductAttributeValue-Color {
+                                width: 21px;
+                                height: 21px;
+                                min-height: 21px;
+
+                                &::before {
+                                    height: 22px;
+                                    width: 22px;
+                                    inset-block-start: -1px;
+                                    inset-inline-start: -1px;
+                                }
+
+                                &::after {
+                                    inset-block-start: 6px;
+                                    inset-inline-start: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .size {
+                    display: none;
+
+                    .ProductConfigurableAttributes-SwatchList {
+                        background: #ffffff 0% 0% no-repeat padding-box;
+                        opacity: 0.79;
+                        padding: 0px;
+                        margin: 0px;
+
+                        .ProductAttributeValue {
+                            margin: 5px 0px;
+                            width: 25%;
+                            height: 30px;
+                            min-width: 30px;
+
+                            .ProductAttributeValue-String {
+                                margin: 0px 0px;
+                            }
+                        }
+                    }
+
+                    p.size_paragraph {
+                        background-color: #5a8a89;
+                        font-size: 9px;
+                        letter-spacing: -0.22px;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 2px 4px;
+                    }
+                }
+            }
+
+            @include desktop {
+                &:hover {
+                    .ProductActions-AttributesWrapper {
+                        display: block;
+                        position: absolute;
+                        inset-inline-end: 0;
+                        inset-block-end: calc(0px + 43px);
+                        width: 100%;
+                    }
+
+                    .ProductConfigurableAttributes {
+                        .color {
+                            position: initial;
+                            inset-block-end: initial;
+                        }
+
+                        .size {
+                            display: block;
+                            // position: absolute;
+                            // inset-inline-end: 0;
+                            // inset-block-end: calc(0px + 43px);
+                            // width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.SharedTransition_isVisible {
+    @include mobile {
+        pointer-events: none;
+        opacity: 0;
+        background: #fff;
+    }
+}
+
+@include mobile {
+    .product-list {
+        .CategoryPage-ProductListWrapper {
+            .ProductList {
+                margin-block-start: 22px;
+
+                .ProductListPage {
+                    padding-inline: 0px;
+
+                    .ProductCard_layout_list {
+                        .ProductCard-Link {
+                            width: 100%;
+
+                            >.ProductCard-Link {
+                                width: 100%;
+                                flex-wrap: wrap;
+                                display: block;
+
+                                .ProductCard-FigureReview {
+                                    .ProductCard-Figure {
+                                        .ProductCard-Picture {
+                                            &.Image {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ProductCard_layout_list {
+        .ProductCard-Content {
+            display: block;
+            position: initial;
+            padding: 1px 8px 5px;
+            clear: both;
+            overflow: auto;
+            margin: 0px 0px;
+            max-width: 100%;
+
+            .ProductCard-ActionWrapper {
+                position: initial;
+
+                .ProductCard-ProductActions {
+                    inset-block-start: 0px;
+                    position: absolute;
+                }
+            }
+
+            .configrationOption-conatiner {
+                margin-inline-start: auto;
+                position: initial;
+                width: 100%;
+                max-width: 40px;
+                margin-block-start: -10px;
+                float: inline-end;
+
+                .btnbox-shop {
+                    >button {
+                        margin-inline-end: 0px;
+                    }
+                }
+
+                .ProductActions-AttributesWrapper {
+                    position: initial;
+                    pointer-events: none;
+                    margin-block-end: 0px;
+                }
+
+                .ProductConfigurableAttributes {
+                    position: initial;
+
+                    .color {
+                        position: absolute;
+                        inset-inline-end: 0;
+                        inset-block-end: calc(0px + 55px);
+                        width: 100%;
+
+                        .ProductConfigurableAttributes-SwatchList {
+                            margin-block-start: 0px;
+                            margin-block-end: 0px;
+
+                            .ProductAttributeValue {
+                                .ProductAttributeValue-Image {
+                                    width: 21px;
+                                    height: 21px;
+                                    min-height: 21px;
+
+                                    &::before {
+                                        height: 22px;
+                                        width: 22px;
+                                        inset-block-start: -1px;
+                                        inset-inline-start: -1px;
+                                    }
+
+                                    &::after {
+                                        inset-block-start: 6px;
+                                        inset-inline-start: 3px;
+                                    }
+                                }
+
+                                .ProductAttributeValue-Color {
+                                    width: 21px;
+                                    height: 21px;
+                                    min-height: 21px;
+
+                                    &::before {
+                                        height: 22px;
+                                        width: 22px;
+                                        inset-block-start: -1px;
+                                        inset-inline-start: -1px;
+                                    }
+
+                                    &::after {
+                                        inset-block-start: 6px;
+                                        inset-inline-start: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .size {
+                        display: none;
+
+                        .ProductConfigurableAttributes-SwatchList {
+                            background: #ffffff 0% 0% no-repeat padding-box;
+                            opacity: 0.79;
+                            padding: 0px;
+                            margin: 0px;
+
+                            .ProductAttributeValue {
+                                margin: 5px 0px;
+                                width: 25%;
+                                height: 30px;
+                                min-width: 30px;
+
+                                .ProductAttributeValue-String {
+                                    margin: 0px 0px;
+                                }
+                            }
+                        }
+
+                        p.size_paragraph {
+                            background-color: #5a8a89;
+                            font-size: 9px;
+                            letter-spacing: -0.22px;
+                            color: #ffffff;
+                            text-align: center;
+                            padding: 2px 4px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .ProductActions-AttributesWrapper {
+                        display: block;
+                        position: absolute;
+                        inset-inline-end: 0;
+                        inset-block-end: calc(0px + 43px);
+                        width: 100%;
+                    }
+
+                    .ProductConfigurableAttributes {
+                        .color {
+                            position: initial;
+                            inset-block-end: initial;
+                        }
+
+                        .size {
+                            display: block;
+                            // position: absolute;
+                            // inset-inline-end: 0;
+                            // inset-block-end: calc(0px + 43px);
+                            // width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .product-list {
+        .CategoryProductList_layout_list {
+            .CategoryProductList-Page_layout_list {
+                .ProductCard_layout_list {
+                    .ProductCard-Link {
+                        .ProductCard-Content_layout_list {
+                            .ProductCard-MainInfo {
+                                .ProductCard-Name.ProductCard-Name_isLoaded {
+                                    max-width: 300px;
+                                }
+                            }
+
+                            .ProductCard-PriceWrapper {
+                                .ProductPrice-PriceValue {
+                                    .lblprice {
+                                        font-size: 16px;
+                                        font-family: $font-muli_bold;
+                                        letter-spacing: -0.39px;
+                                        line-height: normal;
+                                        margin-block-start: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

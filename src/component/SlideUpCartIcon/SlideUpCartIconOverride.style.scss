@@ -1,0 +1,12 @@
+@include mobile {
+    .ProductCard-Content .btnbox-shop {
+        background-color: #000;
+        width: auto;
+        padding: 3px 6px 1px;
+        display: inline-block;
+        border-radius: 23px;
+        margin-inline-end: auto;
+        float: inline-end;
+        clear: both;
+    }
+}

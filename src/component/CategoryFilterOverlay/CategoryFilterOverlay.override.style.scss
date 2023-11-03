@@ -1,0 +1,80 @@
+@include mobile {
+    .CategoryFilterOverlay {
+        &_isVisible {
+            background-color: #58585bf2;
+        }
+
+        .CategoryFilterOverlay-Wrapper {
+            max-width: 85%;
+
+            .filterhead {
+                padding: 10px 20px;
+                border-bottom: 1px solid #ccc;
+                margin-block-end: 20px;
+
+                .txtfilhd {
+                    letter-spacing: -0.41px;
+                    color: #5A8A89;
+                    font-family: $font-muli_bold;
+                    font-size: 17px;
+                    font-weight: 900;
+                }
+
+                .txtfiltracors {
+                    display: flex;
+                    align-items: center;
+                    font-size: 11px;
+                    letter-spacing: -0.27px;
+                    color: #000000;
+
+                    svg {
+                        margin-inline-start: 5px;
+                    }
+                }
+            }
+
+            .CategoryFilterOverlay-Heading,
+            .ResetAttributes-MobileTitle {
+                display: none;
+            }
+
+            .CategoryFilterOverlay-ResetSection {
+                .ResetAttributes {
+                    margin-block-start: 0px;
+                    margin-inline: 0px;
+                }
+
+                .CategoryFilterOverlay-ResetButton {
+                    padding-block-start: 0px;
+                    padding-inline-end: 15px;
+                    
+                    .Button_isHollow {
+                        background-color: #fff;
+                        border: 1px solid #5a8a89;
+                    }
+                }
+            }
+
+            .CategoryFilterOverlay-SeeResults {
+                .CategoryFilterOverlay-Button.Button {
+                    letter-spacing: 0px;
+                    color: #FFFFFF;
+                    font-family: $font-muli_bold;
+                    font-weight: 900;
+                    font-size: 20px;
+                    height: 50px;
+                }
+            }
+
+            .ProductConfigurableAttributes {
+                .ExpandableContent {
+                    .ExpandableContent-Content {
+                        .ProductConfigurableAttributes-DropDownList {
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

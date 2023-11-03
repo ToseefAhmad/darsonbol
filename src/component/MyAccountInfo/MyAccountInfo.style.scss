@@ -1,0 +1,27 @@
+.MyAccountInfo {
+    // TODO style the element
+    order: 0;
+    background: #fff;
+    padding: 30px;
+
+    .Button {
+        background: #F3F1F1;
+        color: var(--secondary-base-color);
+        border: unset;
+        border-radius: 5px;
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &-Info {
+        color: #11171F;
+        font-size: 14px;
+        margin-block-end: 30px;
+
+        div {
+            padding-block-end: 10px;
+        }
+    }
+}

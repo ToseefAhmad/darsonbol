@@ -1,0 +1,14 @@
+.CheckoutOrderSummaryPriceLine {
+    // TODO style the element
+    
+    .coupon {
+        color: red;
+    }
+
+    &-SummaryDivider {
+        border: none;
+        border-top: 1px dotted #0000004d;
+        height: 1px;
+    }
+}
+

@@ -1,0 +1,86 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --breadcrumbs-height: 40px;
+    --breadcrumbs-active-color: #0a0903;
+    --breadcrumbs-color: #888;
+}
+
+.Breadcrumbs {
+    $crumb-padding: 11px;
+    $arrow-size: 4px;
+
+    @include mobile {
+        --breadcrumbs-background: #fff;
+
+        display: none;
+    }
+
+    @include desktop {
+        .Breadcrumbs-List {
+            height: 20px;
+            padding: 0;
+
+            .Crumbs-wrapper {
+                display: flex;
+                height: 18px;
+
+                .Breadcrumb {
+                    padding: 0;
+
+                    &:last-child {
+                        .Breadcrumb-Link {
+                            span {
+                                font: normal normal bold 10px/16px $font-muli-bold;
+                            }
+                        }
+                    }
+
+                    .Breadcrumb-Link {
+                        span {
+                            font: normal normal 300 10px/16px $font-muli;
+                            letter-spacing: -0.24px;
+                            color: #11171F;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .BreadcrumbChevronIcon_direction_left {
+                    margin-inline-start: 10px;
+                    margin-inline-end: 10px;
+                    margin-block-start: 3px;
+                }
+
+                .Crumbs-wrapper__icon {
+                    height: 18px;
+
+                    .Crumbs-wrapper__img {
+                        height: 17px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-List {
+        list-style: none;
+        padding: 16px 0;
+    }
+
+    .Breadcrumbs-List {
+        .ChevronIcon {
+            display: none;
+        }
+    }
+}

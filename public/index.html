@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+    
+    <!-- Muli font import from Abode -->
+    <!-- <link rel="preload" href="https://use.typekit.net/fji5tuz.css" as="style"> -->
+
+    <!-- Default Meta -->
+    <title>ScandiPWA</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Web site created using create-scandipwa-app" />
+
+    <!-- Default content-configurations -->
+    <script>
+        (function() {
+                if (typeof globalThis === 'object') return;
+                Object.prototype.__defineGetter__('__magic__', function() {
+                    return this;
+                });
+                __magic__.globalThis = __magic__;
+                delete Object.prototype.__magic__;
+            }());
+
+        window.contentConfiguration = {};
+        // do reverse sort in order prevent an issue like store code `en` replaces store code `en_us`
+        window.storeList = ['SA_ar','SA_en','AE_ar','AE_en','KW_ar','KW_en','OM_ar','OM_en','BH_ar','BG_en','QA_ar','QA_en'].sort().reverse();
+        window.storeRegexText = `/(${window.storeList.join('|')})?`;
+        window.defaultLocale = 'ar_SA';
+    </script>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/fji5tuz.css">
+
+<!--    css-->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/icon_ios_640x640.png"/>
+
+    <link rel="apple-touch-startup-image" href="/icon_ios_640x640.png">
+    <link rel="apple-touch-icon" href="/icon_ios_640x640.png">
+    <link rel="icon" href="/icon_ios_640x640.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="https://dev.darsonbol.online/media/webmanifest/manifest.json" crossorigin="use-credentials">
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="ello"></div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/*!
+ * Copyright (c) 2022. Shaymaa Saied
+ */
+
+:root {
+    --input-border-radius: var(--imported_input_border_radius, 10px);
+    --special-color: var(--imported_special_color, #{$default-special-color});
+    --default-button-radius: 5px;
+    --header-width: 100%;
+    --header-footer-text-color: #fff;
+    --footer-content-new-height: 47px;
+    --card-border: 1px;
+    --option-text-color: #707070;
+    --primary-divider-color: #F3F1F1;
+    --my-account-background: #FCFBFB;
+    --checkout-payment-method-border-color: #DDD8D8;
+    --checkout-my-account-color: #DDD8D8;
+}

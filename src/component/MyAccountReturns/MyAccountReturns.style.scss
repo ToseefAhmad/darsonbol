@@ -1,0 +1,49 @@
+.return-orderlist-container {
+    max-width: 408px;
+    width: 100%;
+    margin-inline: auto;
+
+    @include desktop {
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-end: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .return-order-list-container {
+        max-width: 11.56rem;
+        margin-inline: auto;
+    }
+
+    .return-content {
+        text-align: center;
+
+        .no-request {
+            font-size: 20px;
+            font-family: "TheSansArab-Bold";
+            padding: 10px 0px;
+        }
+
+        .returntext {
+            font-size: 15px;
+            font-family: $font-muli;
+            padding-block-end: 20px;
+        }
+        
+        .returnlist-button {
+            > a {
+                padding: 16px 10px;
+                background-color: #000;
+                color: #fff;
+                display: block;
+                width: auto;
+                max-width: 184px;
+                border-radius: 5px;
+                margin-inline: auto;
+                font-size: 17px;
+                font-family: "TheSansArab-Bold";
+                font-weight: bold;
+            }
+        }
+    }
+}

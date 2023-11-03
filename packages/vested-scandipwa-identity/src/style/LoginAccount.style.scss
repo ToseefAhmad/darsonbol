@@ -1,0 +1,31 @@
+html {
+    font-size: 100%;
+}
+.flag-input {
+    justify-content: center;
+    width: 100%;
+    border: 1px solid var(--input-border-color) ;
+    background-color: var(--input-background-color);
+    border-radius: 10px ;
+    color: var(--secondary-base-color) ;
+    height: 45px;
+    padding-inline-start: 48px;
+}
+
+.flag-button {
+    background-color: var(--input-background-color);
+    border: none ;
+    margin-inline-start: 10px;
+
+
+}
+.react-tel-input .selected-flag {
+    padding: 0 8px;
+}
+
+.react-tel-input .selected-flag .arrow {
+    inset-inline-start: 20px;
+}
+.flag-drop {
+    background-color: #fff;
+}

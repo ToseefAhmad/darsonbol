@@ -1,0 +1,10 @@
+.MyAccountIcon {
+    // TODO style the element
+    @include icon-black-hover-effect;
+
+    cursor: pointer;
+
+    &_isActive {
+        fill: var(--primary-base-color);
+    }
+}

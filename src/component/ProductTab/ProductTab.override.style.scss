@@ -1,0 +1,14 @@
+.ProductTab {
+    // TODO style the element
+
+    &-Item {
+        &_isActive {
+            background-color: transparent;
+            border-block-end: 5px solid var(--special-color);
+
+            .ProductTab-Button {
+                font-size: 20px;
+            }
+        }
+    }
+}

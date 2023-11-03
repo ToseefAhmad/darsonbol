@@ -1,0 +1,654 @@
+.ProductActions {
+    // TODO style the element
+
+    &-ActionsBlock {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-ActionsBody {
+        display: flex;
+        flex-direction: row;
+        background: #fcf9f9;
+    }
+
+    &-LocationAction {
+        background: #d814018c;
+        min-height: 30px;
+        color: #f9f9f9;
+        padding-block: 7px;
+        padding-inline-start: 20px;
+        font-size: 13px;
+        display: flex;
+        max-width: 560px;
+
+        .Location {
+            @include desktop {
+                margin-inline-end: 50px;
+            }
+
+            margin-inline-end: 10px;
+            margin-inline-start: auto;
+            color: var(--color-black);
+            text-decoration: underline;
+        }
+    }
+
+    &-AttributesWrapper {
+        margin-inline-start: 25px;
+    }
+
+    &-AddToCartWrapper {
+        padding-block-end: 25px;
+        padding-inline-start: 25px;
+        padding-block-start: 25px;
+        background: #fcf9f9;
+        margin-block-start: 0px;
+        padding-inline-end: 10px;
+
+        .AddToCart {
+            width: 100%;
+            height: var(--button-height);
+            border-radius: var(--button-border-radius);
+            max-width: 350px;
+
+            span {
+                display: block;
+                padding-inline-start: 10px;
+            }
+        }
+    }
+
+    &-Qty {
+        border: 1px solid #f3f1f1;
+        background: #f9f9f9;
+
+        button {
+            border: none;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+        }
+    }
+}
+
+@include mobile {
+    .ProductActions {
+        .SizeChartButton {
+            margin-inline-end: 0px;
+            padding-block-start: 13px;
+
+            .SizeChartButton-Button {
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-size: 11px;
+                    letter-spacing: -0.27px;
+                    color: #5A8A89;
+                }
+            }
+        }
+
+        .ProductActions-Title {
+            font: normal normal bold 20px/32px $font-muli-bold;
+            letter-spacing: -0.48px;
+            color: #000000;
+            opacity: 1;
+            margin: 0px;
+        }
+
+        .PDP_Header_section {
+            display: flex;
+            justify-content: space-between;
+            min-height: 4rem;
+
+            .Product_Actions {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+            }
+        }
+
+        .ProductActions-Section_type_short {
+            .ProductActions-ShortDescription {
+                margin-block-start: 0;
+                margin-block-end: 15px;
+                font: normal normal 300 14px/22px $font-muli;
+                letter-spacing: -0.34px;
+                color: #000000;
+                opacity: 1;
+            }
+
+            .ProductActions-ActionsWrapper {
+                margin-block-end: 7px;
+
+                .ProductActions-Schema {
+                    .ProductActions-PriceWrapper {
+                        .ProductActions-PriceWrapper {
+                            .ProductPrice {
+                                .ProductPrice-Price {
+                                    .ProductPrice-PriceValue {
+                                        font: normal normal 900 23px/37px $font-muli-bold;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .configration-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .ProductActions-AttributesWrapper {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+
+                .ProductConfigurableAttributes {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    .size,
+                    .color {
+                        .ProductConfigurableAttributes-Title {
+                            margin: 0;
+                        }
+
+                        .ProductConfigurableAttributes-SwatchList {
+                            .ProductAttributeValue {
+                                height: 33px;
+                                width: 33px;
+                                margin-inline-end: 5px;
+
+                                .ProductAttributeValue-String {
+                                    border-radius: 50%;
+                                    width: 32px;
+                                    height: 32px;
+                                    padding: 0;
+                                    margin: 0;
+                                    font: normal normal bold 20px/30px "TheSansArab-Bold", sans-serif;
+                                    letter-spacing: -0.63px;
+                                    color: #5054598c;
+                                }
+
+                                .ProductAttributeValue-String_isSelected {
+                                    background: #000000 0% 0% no-repeat padding-box;
+                                    opacity: 1;
+                                    font: normal normal bold 20px/30px "TheSansArab-Bold", sans-serif;
+                                    letter-spacing: -0.63px;
+                                    color: #f9f9f9;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+
+                    .color {
+                        order: 2;
+                    }
+
+                    .size {
+                        order: 1;
+                        padding-block-start: 0px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .size_paragraph {
+                            order: 1;
+                        }
+
+                        .ProductConfigurableAttributes-Title {
+                            order: 2;
+                        }
+
+                        .ProductConfigurableAttributes-SwatchList {
+                            order: 3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ProductActions-LocationAction {
+            width: 100vw;
+            position: relative;
+            inset-inline: 50%;
+            inset-inline-end: 50%;
+            margin-inline-start: -50vw;
+            margin-inline-end: -50vw;
+
+            span {
+                font: normal normal 300 12px/20px $font-muli;
+                letter-spacing: -0.29px;
+                color: #ffffff;
+            }
+
+            .Location_type_location {
+                span {
+                    font: normal normal bold 12px/20px $font-muli-bold;
+                    letter-spacing: -0.29px;
+                    color: #000000;
+                }
+            }
+        }
+
+        .product-action-payment-option {
+            display: flex;
+            justify-content: space-between;
+            max-width: 410px;
+            padding-block-start: 10px;
+            align-items: center;
+
+            >p {
+                padding-inline: 10px;
+            }
+
+            .pdp-payment__link {
+                display: flex;
+                font: normal normal 300 13px/21px $font-muli;
+                letter-spacing: -0.31px;
+                color: #505459;
+
+                .tamara,
+                .tabby {
+                    padding-inline-start: 5px;
+                }
+            }
+
+            p {
+                font: normal normal 300 12px/20px $font-muli;
+                letter-spacing: -0.29px;
+                color: #5054598f;
+                margin-block-end: 5px;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .ProductPage {
+        [aria-label="علامات تبويب المنتج"] {
+            .ContentWrapper.ProductTabs-Wrapper {
+                display: grid;
+                max-width: 1120px;
+                padding-inline: 15px;
+                padding-block-end: 20px;
+
+                .ProductTabs {
+                    .ProductTab-Item {
+                        .ProductTab-Button {
+                            font-size: 20px;
+                            font-family: $font-muli;
+                            letter-spacing: -0.48px;
+                            color: #000000;
+                        }
+                    }
+
+                    .ProductTab-Item.ProductTab-Item_isActive {
+                        .ProductTab-Button {
+                            font-family: $font-muli_bold;
+                        }
+                    }
+                }
+
+                .ProductAttributes-Content {
+                    padding-block: 25px;
+
+                    .ExpandableContent-Content {
+                        .ProductAttributes-AttributeBlock {
+                            .ProductAttributes-Group {
+                                font-size: 12px;
+                                font-family: $font-muli;
+                                padding-block: 0px;
+                            }
+
+                            .ProductAttributes-Attributes {
+                                .ProductAttributes-AttributeLabel {
+                                    font-size: 12px;
+                                    font-family: $font-muli;
+                                    color: #707070;
+                                    padding-block: 5px;
+                                    border-bottom: none;
+                                }
+
+                                .ProductAttributes-ValueLabel {
+                                    padding-block: 5px;
+                                    border-bottom: none;
+
+                                    .ProductAttributeValue {
+                                        font-size: 12px;
+                                        font-family: $font-muli;
+                                        color: #707070;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ProductPage-Wrapper {
+            grid-column-gap: 0px;
+
+            .ProductGallery {
+                .ProductGallery-SliderWrapper {
+                    .Slider-Arrow_isPrev {
+                        inset-inline-start: 0px;
+                    }
+
+                    .Slider-Arrow_isNext {
+                        inset-inline-end: 0px;
+                    }
+                }
+            }
+
+            .ProductActions {
+                .ProductActions-ActionButtons {
+                    position: absolute;
+                    inset-inline-start: calc(0px - 40px);
+                    inset-block-start: 15px;
+                }
+
+                .ProductActions-Title {
+                    font: normal normal bold 25px/41px $font-muli-bold;
+                    letter-spacing: -0.6px;
+                    color: #000000;
+                    opacity: 1;
+                    margin-block-start: 0px;
+                }
+            }
+
+            .ProductActions-Section {
+                .ProductActions-ShortDescription {
+                    margin-block-start: 0;
+
+                    .description {
+                        p {
+                            span {
+                                font: normal normal 300 17px/27px $font-muli;
+                                letter-spacing: -0.41px;
+                                color: #000000;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProductActions-Schema {
+                .ProductActions-PriceWrapper {
+                    .ProductActions-PriceWrapper {
+                        .ProductPrice {
+                            .ProductPrice-Price {
+                                padding-block-end: 12px;
+
+                                .ProductPrice-PriceValue {
+                                    margin: 0;
+                                    font: normal normal 900 30px/48px $font-muli-bold;
+                                    letter-spacing: 0px;
+                                    color: #000000;
+                                    opacity: 1;
+
+                                    .pricevalue {
+                                        font-weight: 900;
+                                        font-family: $font-muli_bold;
+                                        margin-inline-end: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProductActions-LocationAction {
+                span {
+                    font: normal normal 300 13px/21px $font-muli;
+                    letter-spacing: -0.31px;
+                    color: #ffffff;
+                    opacity: 1;
+                }
+
+                .ProductActions-Button {
+                    span {
+                        text-decoration: underline;
+                        font: normal normal bold 13px/21px $font-muli-bold;
+                        letter-spacing: -0.31px;
+                        color: #000000;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .ProductActions-ActionsBody {
+                display: flex;
+                flex-direction: row;
+
+                .desktop-pdp-sizechart {
+                    width: -webkit-fill-available;
+                    height: 100%;
+                    margin-block-start: 40px;
+
+                    .SizeChartButton {
+                        margin-inline-start: 50px;
+                        margin-inline-end: auto;
+                    }
+                }
+
+                .ProductActions-AttributesWrapper {
+                    display: flex;
+                    margin: 0;
+
+                    .ProductConfigurableAttributes {
+                        display: flex;
+                        flex-direction: column;
+
+                        .color {
+                            order: 2;
+                            display: flex;
+                            align-items: center;
+
+                            .ProductConfigurableAttributes-Title {
+                                margin-block-start: 0;
+                                margin-inline-start: 25px;
+                                font: normal normal 300 14px/22px $font-muli;
+                                letter-spacing: -0.34px;
+                                color: #000000;
+                                opacity: 1;
+                                display: flex;
+                                flex-direction: row-reverse;
+
+                                .ProductConfigurableAttributes-SelectedOptionLabel {
+                                    padding-inline-start: 0;
+                                    display: none;
+                                }
+                            }
+
+                            .ProductConfigurableAttributes-SwatchList {
+                                margin-inline-start: 15px;
+
+                                .ProductAttributeValue {
+                                    height: 40px;
+                                    width: 40px;
+                                    display: flex;
+                                    margin-inline-end: 4px;
+                                    align-items: center;
+
+                                    @include desktop {
+                                        &.ProductAttributeValue_isNotAvailable {
+                                            .ProductAttributeValue-Color {
+                                                &::before {
+                                                    inset-inline-start: 18px;
+                                                    inset-block-start: -6px;
+                                                    height: 50px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:not(.ProductAttributeValue_isNotAvailable) {
+                                        .ProductAttributeValue-Color {
+                                            &::before {
+                                                height: 39px;
+                                                width: 39px;
+                                                inset-block-start: 0;
+                                                inset-inline-start: 0;
+                                            }
+
+                                            &::after {
+                                                inset-block-start: 12px;
+                                                inset-inline-start: 12px;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    .ProductAttributeValue-Color {
+                                        border-radius: 4px;
+                                        opacity: 1;
+                                        height: 39px;
+                                        width: 39px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .size {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            width: 100%;
+
+                            .ProductConfigurableAttributes-Title {
+                                order: 2;
+                                margin: 0;
+                                position: absolute;
+                                padding-block-start: 60px;
+                                margin-inline-start: 10px;
+                                font: normal normal 300 14px/22px $font-muli;
+                                letter-spacing: -0.34px;
+                                color: #000000;
+                                opacity: 1;
+                                display: flex;
+                                flex-direction: row-reverse;
+
+                                .ProductConfigurableAttributes-SelectedOptionLabel {
+                                    padding-inline-start: 0;
+                                }
+                            }
+
+                            .ProductConfigurableAttributes-SwatchList {
+                                order: 2;
+                                margin-inline-start: 60px;
+                                width: max-content;
+
+                                .ProductAttributeValue {
+                                    height: 40px;
+                                    width: 40px;
+                                    margin-inline-start: 9px;
+                                    margin-block-end: 5px;
+
+                                    .ProductAttributeValue-String {
+                                        padding: 0;
+                                        margin: 0;
+                                        border: 1px solid #dddddd;
+                                        border-radius: 4px;
+                                        height: 39px;
+                                        font: normal normal bold 26px/41px $font-muli-bold;
+                                        letter-spacing: -0.63px;
+                                        color: #5054598c;
+                                        opacity: 1;
+                                        width: 39px;
+
+                                        &.ProductAttributeValue-String_isSelected {
+                                            background: #000000 0% 0% no-repeat padding-box;
+                                            border-radius: 4px;
+                                            opacity: 1;
+                                            font: normal normal bold 26px/41px $font-muli-bold;
+                                            letter-spacing: -0.63px;
+                                            color: #f9f9f9;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .size_paragraph {
+                                order: 1;
+                                font: normal normal 300 13px/21px $font-muli;
+                                letter-spacing: -0.31px;
+                                color: #e97e73;
+                                opacity: 1;
+                                padding-block-start: 15px;
+                                margin-block-end: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProductActions-AddToCartWrapper {
+                .Field-Wrapper {
+                    .ProductActions-Qty.Field {
+                        margin-inline-end: 15px;
+                    }
+                }
+
+                .configrationOption-conatiner {
+                    width: 100%;
+
+                    .ProductActions-AddToCart {
+                        margin-inline-end: 0px;
+                        width: 100%;
+                    }
+                }
+
+                .product-action-qty {
+                    padding-inline-end: 11px;
+                    padding-block-start: 0px;
+                }
+            }
+
+            .product-action-payment-option {
+                display: flex;
+                justify-content: space-around;
+                max-width: 410px;
+                padding-block-start: 15px;
+                padding-inline-start: 20px;
+                align-items: center;
+
+                .pdp-payment__link {
+                    display: flex;
+                    align-items: center;
+                    font: normal normal 300 13px/21px $font-muli;
+                    letter-spacing: -0.31px;
+                    color: #505459;
+                    opacity: 1;
+
+                    .tamara,
+                    .tabby {
+                        padding-inline-start: 5px;
+                    }
+                }
+
+                p {
+                    font: normal normal 300 12px/20px $font-muli;
+                    letter-spacing: -0.29px;
+                    color: #5054598f;
+                    opacity: 1;
+                    margin-block-end: 5px;
+                }
+            }
+        }
+    }
+}

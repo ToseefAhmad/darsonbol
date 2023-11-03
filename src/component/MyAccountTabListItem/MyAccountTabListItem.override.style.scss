@@ -1,0 +1,27 @@
+.MyAccountTabListItem {
+    // TODO style the element
+    background: #fff;
+
+    &:not(:last-child) {
+        border-bottom: var(--my-account-content-border);
+    }
+
+    &-Button {
+        font-size: 17px;
+        color: var(--secondary-base-color);
+
+        @include desktop {
+            padding: 20px 25px;
+        }
+    }
+
+    &_isActive,
+    &:hover {
+        background: #FCFBFB;
+
+        .MyAccountTabListItem-Button {
+            font-weight: bold;
+            color: var(--color-black);
+        }
+    }
+}

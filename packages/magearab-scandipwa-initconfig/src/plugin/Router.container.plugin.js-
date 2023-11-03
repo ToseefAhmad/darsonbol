@@ -1,0 +1,26 @@
+
+import { InitConfigDispatcher } from '../store/InitConfig/InitConfig.dispatcher';
+
+/** @namespace MagearabScandipwaInitconfig/Plugin/Router/Container */
+export class RouterContainerPlugin {
+    mapDispatchToProps = (args, callback, instance) => {
+        const [dispatch] = args;
+        const original = callback.apply(instance, args);
+
+        return {
+            ...original,
+            init: (options) => {
+                original.init(options);
+                InitConfigDispatcher.handleData(dispatch);
+            }
+        };
+    };
+}
+
+const { mapDispatchToProps } = new RouterContainerPlugin();
+
+export default {
+    'Component/Router/Container/mapDispatchToProps': {
+        function: mapDispatchToProps
+    }
+};

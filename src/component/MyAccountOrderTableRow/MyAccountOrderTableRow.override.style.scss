@@ -1,0 +1,189 @@
+.MyAccount {
+    .MyAccountMyOrders {
+        .MyAccountOrderTableRow {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .wrapbox-container {
+        border-top: 1px solid #DDD8D8;
+        margin-block-end: 5px;
+
+        .wrapper-odrdetail {
+            .order-id {
+                width: auto;
+                display: inline-block;
+                margin-block-start: 2px;
+
+                span {
+                    font-size: 17px;
+                    font-family: $font-muli_bold;
+                }
+            }
+
+            .order-date-details {
+                width: auto;
+                display: block;
+                margin-block-end: 5px;
+
+                span {
+                    color: #505459;
+                    font-size: 12px;
+                    font-family: 'TheSansArab-Light';
+                }
+            }
+
+            .order-detail-button {
+                position: absolute;
+                inset-block-start: 0PX;
+                inset-inline-end: 0px;
+                background: #DDD8D8;
+                padding: 4px 27px;
+                cursor: pointer;
+
+                >button {
+                    font-size: 17px;
+                    font-family: $font-muli;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.MyAccountOrderTableRow {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .order-item {
+        display: flex;
+        flex: 1 1 50%;
+        margin-block-end: 15px;
+        cursor: initial;
+
+        @include mobile {
+            flex: 1 1 100%;
+        }
+
+        .order-image {
+            max-width: 80px;
+            width: 100%;
+
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        .order-item-content {
+            flex: 1;
+            padding-inline: 15px;
+
+            .product-name {
+                letter-spacing: -0.36px;
+                color: #000000;
+                font-size: 11px;
+                margin-block-end: 0px;
+            }
+
+            .short-descrip {
+                letter-spacing: -0.22px;
+                color: #505459;
+                font-size: 9px;
+            }
+
+            .optionsbox-item {
+                display: flex;
+                align-items: center;
+
+                >p {
+                    font-family: $font-muli;
+                    margin-block-end: 4px;
+                    margin-inline-end: 5px;
+                    font-size: 11px;
+
+                    &.المقاس {
+                        order: 1;
+                    }
+
+                    span {
+                        font-size: 11px;
+                        letter-spacing: -0.31px;
+                        font-family: $font-muli;
+                        color: #505459;
+
+                        &.lblitems-box {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            .sts_orderitems {
+                letter-spacing: -0.36px;
+                font-size: 15px;
+
+                &.notverify {
+                    color: #D814018C;
+                }
+
+                &.verify {
+                    color: #55BD79;
+                }
+
+                &.pending {
+                    color: yellow;
+                }
+            }
+
+            >p {
+                font-family: $font-muli;
+                margin-block-end: 4px;
+                margin-inline-end: 5px;
+                font-size: 11px;
+
+                span {
+                    font-size: 11px;
+                    letter-spacing: -0.31px;
+                    font-family: $font-muli;
+                    color: #505459;
+
+                    &.lblitems-box {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .order-total {
+            max-width: 80px;
+            width: 100%;
+
+            .pricebox-itmbt {
+                >span {
+                    letter-spacing: -0.43px;
+                    color: #11171f;
+                    font-size: 18px;
+                    font-family: $font-muli;
+                }
+
+                .order-value {
+                    font-family: $font-muli_bold;
+                    padding-inline-end: 5px;
+                }
+            }
+
+            .product-rating {
+                margin-block-end: 0px;
+                letter-spacing: -0.36px;
+                color: #5a8a89;
+                font-size: 15px;
+                text-decoration: underline;
+                text-align: end;
+                margin-block-start: 38px;
+            }
+        }
+    }
+}

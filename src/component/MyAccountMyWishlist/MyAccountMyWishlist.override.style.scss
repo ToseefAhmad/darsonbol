@@ -1,0 +1,199 @@
+.MyAccount {
+    .MyAccount-TabContent {
+        @include mobile {
+            margin-inline-end: 0px;
+        }
+    }
+
+    .MyAccountMyWishlist-NoProducts {
+        width: 100%;
+        max-width: 408px;
+        margin-inline-end: auto;
+        margin-inline-start: auto;
+    }
+
+    .MyAccountMyWishlist {
+        .MyAccountMyWishlist-ActionBar {
+            position: relative;
+            justify-content: space-between;
+            inset-block-start: initial;
+
+            @include mobile {
+                padding-block-start: 40px;
+            }
+        }
+
+        .MyAccountMyWishlist-Products {
+            display: block;
+            grid-column: initial;
+            grid-template-columns: initial;
+            grid-auto-rows: initial;
+            grid-gap: initial;
+
+            .ProductCard_layout_list {
+                width: 100%;
+                flex-direction: row;
+                margin-block-end: 20px;
+                background-color: #fff;
+                border: 0px;
+                padding: 15px 15px;
+                border-radius: 5px;
+
+                @include mobile {
+                    padding: 0px;
+                    background-color: #FCFBFB;
+                    margin-block-end: 50px;
+                }
+
+                .WishlistItem-FigureWrapper {
+                    max-width: 185px;
+
+                    @include mobile {
+                        max-width: 112px;
+                        width: 100%;
+                    }
+
+                    .ProductCard-Figure {
+                        >a {
+                            display: flex;
+
+                            .Image-Image {
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+
+                >div {
+                    flex: 1 1 auto;
+                    padding: 0px 0px;
+                }
+
+                .WishlistItem-Content {
+                    padding-inline-start: 15px;
+                    padding-inline-end: 20px;
+
+                    @include mobile {
+                        padding-inline-end: 0px;
+                    }
+
+                    >h4 {
+                        letter-spacing: -0.46px;
+                        color: #000000;
+                        font-size: 19px;
+                        padding-block-start: 15px;
+                    }
+
+                    .WishlistItem-RowWrapper {
+                        @include mobile {
+                            flex-direction: column;
+                        }
+
+                        .WishlistItem-Price {
+                            margin-block-end: 0px;
+                            min-height: auto;
+
+                            @include desktop {
+                                position: absolute;
+                                inset-inline-end: 0px;
+                                inset-block-start: -34px;
+                            }
+
+                            .ProductCard-Price {
+                                @include mobile {
+                                    align-items: flex-start;
+                                    padding-block-start: 5px;
+                                }
+                            }
+
+                            .ProductPrice-Price {
+                                @include mobile {
+                                    display: block;
+                                }
+
+                                .ProductPrice-PriceValue {
+                                    @include mobile {
+                                        display: flex;
+                                        flex-direction: row-reverse;
+                                    }
+
+                                    .lblprice {
+                                        font-size: 23px;
+                                        font-family: $font-muli;
+                                        color: #11171F;
+                                        margin-inline-start: 5px;
+                                    }
+
+                                    .pricevalue {
+                                        font-size: 23px;
+                                        font-family: $font-muli_bold;
+                                        color: #11171F;
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
+                        }
+
+                        .wishlist-config-options {
+                            .ProductActions-AttributesWrapper {
+                                .size {
+                                    .size_paragraph {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .WishlistItem-QuantityInput {
+                            background-color: #ddd8d8;
+                            overflow: hidden;
+                            border-radius: 5px;
+
+                            input {
+                                height: 36px;
+                            }
+
+                            >button {
+                                border: 0px;
+                            }
+                        }
+                    }
+
+                    .WishlistItem-ActionWrapper {
+                        justify-content: end;
+
+                        .WishlistItem-AddToCart {
+                            width: auto;
+                            max-width: 180px;
+                            height: 38px;
+                            padding: 4px 24px;
+                            font-size: 13px;
+                            border-radius: 5px;
+                            margin-inline-end: 0px;
+                            margin-inline-start: 10px;
+                            background-color: #000000;
+                            border: 1px solid #000000;
+
+                            @include mobile {
+                                padding: 4px 4px;
+                                margin-inline-start: 4px;
+                            }
+                        }
+
+                        .WishlistItem-Remove {
+                            width: auto;
+                            max-width: 180px;
+                            height: 38px;
+                            padding: 4px 24px;
+                            cursor: pointer;
+                            font-size: 13px;
+                            color: #000000;
+                            border: 0.5px solid #dddddd;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

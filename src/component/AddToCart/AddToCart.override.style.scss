@@ -1,0 +1,398 @@
+.AddToCart {
+    // TODO style the element
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    margin-inline-end: 0;
+    margin-inline-start: auto;
+
+    span {
+        display: none;
+    }
+
+    @include mobile {
+        min-width: 50px;
+        line-height: 20px;
+    }
+
+    .CartIcon {
+        width: 25px;
+        margin-inline-end: unset;
+    }
+}
+
+@include mobile {
+    .ProductCard-Content .btnbox-shop {
+        background-color: #000;
+        width: auto;
+        padding: 3px 6px 1px;
+        display: inline-block;
+        border-radius: 23px;
+        margin-inline-end: auto;
+        float: inline-end;
+        clear: both;
+        height: auto;
+    }
+}
+
+@include mobile {
+    .ReactModal__Body--open {
+        overflow: hidden;
+
+        .InitConfig {
+            z-index: -5;
+            filter: blur(4px);
+        }
+    }
+
+    .ReactModal__Content {
+        // position: fixed;
+        // inset-block: 0px;
+        // width: 100%;
+        // z-index: 100;
+        // inset-inline-end: 0px;
+        // background-color: rgba(0, 0, 0, 0.28);
+
+        .mobile-cart-box {
+            // background-color: #fff;
+            // inset-block-end: 0%;
+            // padding: 40px 20px 10px;
+            // position: absolute;
+            // border-top-left-radius: 40px;
+            // border-top-right-radius: 40px;
+            // width: 100%;
+
+            .productclosebox {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 11px;
+
+                svg {
+                    margin-inline-start: 5px;
+                }
+            }
+
+            .Product-container {
+                display: flex;
+
+                .image-container {
+                    max-width: 112px;
+                    margin-inline-end: 12px;
+                }
+
+                .product-description {
+                    h3 {
+                        letter-spacing: -0.48px;
+                        color: #000000;
+                        line-height: normal;
+                        font-size: 20px;
+                        margin: 0px 0px 2px;
+                    }
+
+                    .shordescr {
+                        font-size: 12px;
+                        letter-spacing: -0.29px;
+                        color: #000000;
+                        margin-block-end: 25px;
+                    }
+
+                    .pricesp {
+                        .ProductPrice {
+                            .ProductPrice-Price {
+                                .ProductPrice-PriceValue {
+                                    .pricevalue {
+                                        font-size: 24px;
+                                    }
+
+                                    .lblprice {
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Product-ftr {
+                .ProductActions-AttributesWrapper {
+                    .ProductConfigurableAttributes {
+                        display: flex;
+                        flex-direction: column;
+
+                        .size {
+                            order: 0;
+
+                            .ProductConfigurableAttributes-Title {
+                                margin-block-start: 0px;
+                                margin-block-end: 0px;
+                            }
+
+                            .size_paragraph {
+                                display: none;
+                            }
+                        }
+
+                        .color {
+                            order: 1;
+
+                            .ProductConfigurableAttributes-Title {
+                                display: block;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                font-size: 17px;
+                                background-color: #f9f9f9;
+                                padding: 17px 20px;
+                                margin-inline: -20px;
+                                font-weight: 400;
+                                margin-block-start: 5px;
+                                margin-block-end: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btnbox-shop {
+                background-color: #000;
+                padding: 3px 6px 1px;
+                display: flex;
+                border-radius: 5px;
+                clear: both;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                .btn-content__wrapper {
+                    width: 100%;
+                    clear: both;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg {
+                        height: 26px;
+                        width: 20px;
+                    }
+
+                    .btn-text {
+                        font: normal normal 900 17px/42px $font-muli-bold;
+                        letter-spacing: 0px;
+                        color: #ffffff;
+                        opacity: 1;
+                        margin-inline-start: 11px;
+                    }
+                }
+            }
+
+            .Sizecahrbox {
+                display: flex;
+                justify-content: space-between;
+                background-color: #f9f9f9;
+                padding: 17px 20px;
+                margin-inline: -20px;
+                margin-block: 10px;
+
+                .lablechrt {
+                    letter-spacing: 0px;
+                    color: #000000;
+                    font-size: 17px;
+                }
+
+                .guidszie {
+                    letter-spacing: -0.27px;
+                    color: #5a8a89;
+                    font-size: 11px;
+
+                    .SizeChartButton {
+                        margin-block-start: 0px;
+                        margin-inline-end: 0px;
+
+                        .RulerIcon {
+                            inset-block-start: 8px;
+                        }
+
+                        span {
+                            letter-spacing: -0.27px;
+                            color: #5a8a89;
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop design for Product Pop on PDP page
+
+.product-popup {
+    display: flex;
+    gap: 1rem;
+
+    @include desktop {
+        align-items: center;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        border: 1px dashed #5A8A89;
+        padding: 10px 5px;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .tick-icon-container {
+        flex: 1 1 1%;
+        max-width: 43px;
+
+        @include mobile {
+            flex: 1 1 100%;
+            max-width: 39px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .product-detail {
+        flex: 1 1 65%;
+        display: flex;
+        align-items: center;
+        max-width: 65%;
+
+        @include mobile {
+            flex: 1 1 100%;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .product-image-container {
+            max-width: 80px;
+            margin-inline-end: 20px;
+
+            @include mobile {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .product-description {
+            p.title {
+                letter-spacing: -0.48px;
+                color: #000000;
+                font-size: 20px;
+                margin-block-end: 15px;
+
+                @include mobile {
+                    font-size: 17px;
+                }
+
+                .added-text {
+                    color: #5A8A89;
+                    font-family: $font-muli-bold;
+                    margin-inline-end: 8px;
+
+                    @include mobile {
+                        display: block;
+                        margin-inline-end: 0px;
+                        margin-block-end: 5px
+                    }
+                }
+            }
+
+            .price {
+                margin-block-end: 0px;
+
+                span {
+                    font-size: 18px;
+                    letter-spacing: -0.43px;
+                    color: #11171F;
+                }
+
+                .price {
+                    font-family: $font-muli-bold;
+                    margin-inline-end: 5px;
+                }
+            }
+
+            .text {
+                font-size: 12px;
+                letter-spacing: -0.29px;
+                color: #505459;
+                margin-block-end: 0px;
+
+                @include mobile {
+                    margin-block-end: 5px;
+                }
+            }
+        }
+    }
+
+    .cart-back-btn {
+        flex: 1 1 auto;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+
+        @include mobile {
+            flex: 1 1 100%;
+            max-width: 100%;
+            flex-direction: row;
+        }
+
+        .shopping-btn {
+            color: black;
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 246px;
+            padding: 15px 10px;
+            cursor: pointer;
+            font-size: 17px;
+            font-family: $font-muli-bold;
+            letter-spacing: 0px;
+
+            @include mobile {
+                padding: 5.5px 7px;
+                font-size: 15px;
+            }
+        }
+
+        .cart-page-btn {
+            color: rgb(255, 255, 255);
+            border: 1px solid #000000;
+            background-color: #000;
+            border-radius: 5px;
+            width: 100%;
+            padding: 0;
+            cursor: pointer;
+            max-width: 246px;
+            font-size: 17px;
+            letter-spacing: 0px;
+            font-family: $font-muli-bold;
+
+            a {
+                padding: 15px 10px;
+                display: block;
+                width: 100%;
+                color: rgb(255, 255, 255);
+
+                @include mobile {
+                    padding: 5.5px 7px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

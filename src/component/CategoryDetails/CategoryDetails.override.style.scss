@@ -1,0 +1,13 @@
+.CategoryDetails {
+    // TODO style the element
+    display: block;
+    grid-template-columns: unset;
+
+    &-Picture {
+        height: 250px;
+    }
+
+    .Image-Image {
+        object-fit: fill;
+    }
+}

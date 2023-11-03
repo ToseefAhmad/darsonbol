@@ -1,0 +1,19 @@
+{
+    "name": "@vested/scandi-advanced-pagebuilder",
+    "version": "0.0.0",
+    "license": "OSL-3.0",
+    "scandipwa": {
+        "type": "extension"
+    },
+    "dependencies": {
+        "@mui/icons-material": "^5.8.4",
+        "@mui/material": "^5.9.2",
+        "react-otp-input": "^2.4.0",
+        "react-phone-input-2": "^2.15.1",
+        "swiper": "^7.4.1",
+        "react-swipeable-views": "^0.14.0"
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa"
+    }
+}

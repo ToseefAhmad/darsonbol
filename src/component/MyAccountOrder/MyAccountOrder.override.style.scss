@@ -1,0 +1,291 @@
+.MyAccount {
+    .MyAccount-TabContent {
+        @include mobile {
+            margin-inline-end: initial;
+        }
+
+        .MyAccountOrder-CreationDate {
+            .MyAccountOrder-OrderId {
+                font-size: 17px;
+                font-family: $font-muli_bold;
+                color: #000000;
+                font-weight: normal;
+                margin-block: 0px;
+            }
+
+            .orderbox-tds {
+                display: flex;
+                align-items: center;
+                padding-block-start: 5px;
+
+                >span {
+                    color: #505459;
+                    font-size: 12px;
+                    font-family: $font-muli;
+                    padding-inline-end: 10px;
+                }
+
+                .MyAccountOrder-OrderStatus {
+                    padding: 0px;
+                    border: none;
+                    display: inline-block;
+                    width: auto;
+                    margin: 0px;
+                }
+            }
+        }
+
+        .order-totals {
+            .title-ordersumry {
+                letter-spacing: -0.31px;
+                color: #000000;
+                font-size: 13px;
+                font-weight: bold;
+                font-family: $font-muli_bold;
+            }
+
+            .MyAccountOrderTotals-Wrapper {
+                max-width: 440px;
+                background-color: inherit;
+                padding-inline-end: 45px;
+
+                @include mobile {
+                    padding-inline-end: 0px;
+                }
+
+                >div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-block: 2px;
+
+                    >span {
+                        color: #000000;
+                        font-size: 14px;
+                        font-family: $font-muli;
+                        padding-inline: 10px;
+
+                        &[colspan="4"] {
+                            padding-inline-start: 0px;
+                        }
+
+                        @include mobile {
+                            &[colspan="3"] {
+                                padding-inline-start: 0px;
+                            }
+
+                            &[colspan="2"] {
+                                padding-inline-end: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .MyAccountOrderTotals-GrandTotal {
+                    &-WithTax {
+                        background: #DDD8D8;
+                        padding-block: 7px;
+                        margin-block-start: 8px;
+
+                        @include desktop {
+                            margin-inline-end: -45px;
+                        }
+
+                        @include mobile {
+                            margin-inline: -15px;
+                            padding-inline: 15px;
+                            margin-block-end: 30px;
+                        }
+
+                        >span {
+                            font-family: $font-muli_bold;
+
+                            &[colspan="1"] {
+                                padding-inline-end: 55px;
+                            }
+
+                            &[colspan="4"] {
+                                padding-inline-start: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order-items-container {
+        max-width: 387px;
+        border-top: 1px solid #DDD8D8;
+        padding-block-start: 10px;
+
+        .order-item {
+            display: flex;
+            margin-block-end: 30px;
+
+            .order-image {
+                max-width: 80px;
+                width: 100%;
+
+                img {
+                    border-radius: 5px;
+                }
+            }
+
+            .order-item-content {
+                flex: 1;
+                padding-inline: 15px;
+
+                .product-name {
+                    letter-spacing: -0.36px;
+                    color: #000000;
+                    font-size: 15px;
+                    margin-block-end: 6px;
+                }
+
+                >p {
+                    font-family: $font-muli;
+                    margin-block-end: 4px;
+
+                    span {
+                        font-size: 13px;
+                        letter-spacing: -0.31px;
+                        font-family: $font-muli;
+                        color: #505459;
+
+                        &.lblitems-box {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            .order-total {
+                max-width: 80px;
+                width: 100%;
+
+                .pricebox-itmbt {
+                    >span {
+                        letter-spacing: -0.43px;
+                        color: #11171F;
+                        font-size: 18px;
+                        font-family: $font-muli;
+                    }
+
+                    .order-value {
+                        font-family: $font-muli_bold;
+                        padding-inline-end: 5px;
+                    }
+                }
+
+                .product-rating {
+                    margin-block-end: 0px;
+                    letter-spacing: -0.36px;
+                    color: #5A8A89;
+                    font-size: 15px;
+                    text-decoration: underline;
+                    text-align: end;
+                    margin-block-start: 38px;
+                }
+            }
+        }
+    }
+
+    .shipping-container {
+        margin-block-end: 20px;
+
+        .shipping-heading {
+            letter-spacing: -0.31px;
+            color: #000000;
+            font-size: 13px;
+            font-family: $font-muli_bold;
+            font-weight: bold;
+        }
+
+        .cust-name {
+            letter-spacing: 0px;
+            color: #000000;
+            font-family: $font-muli_bold;
+            font-size: 11px;
+        }
+
+        .stradres-cust {
+            letter-spacing: 0px;
+            color: #505459;
+            font-size: 11px;
+        }
+    }
+
+    .mobbox-change {
+        margin-block-end: 20px;
+
+        .mobile-number {
+            letter-spacing: -0.31px;
+            color: #000000;
+            font-size: 13px;
+            font-family: $font-muli_bold;
+            font-weight: bold;
+        }
+
+        .perbox-phone-sts {
+            display: flex;
+            align-items: center;
+
+            .phone {
+                letter-spacing: 0px;
+                color: #000000;
+                font-family: $font-muli;
+                font-size: 13px;
+            }
+
+            .verification {
+                letter-spacing: 0px;
+                color: #55BD79;
+                font-size: 13px;
+                margin-inline-start: 15px;
+            }
+        }
+    }
+
+    .shipment-details-container {
+        display: flex;
+        align-items: center;
+        margin-block-end: 20px;
+
+        .shipment-number {
+            .ship-title {
+                letter-spacing: 0px;
+                color: #000000;
+                font-family: 'TheSansArab-Bold';
+                font-size: 11px;
+            }
+
+            .ship-number {
+                letter-spacing: 0px;
+                color: #000000;
+                font-family: 'TheSansArab-Light';
+                font-size: 11px;
+            }
+        }
+
+        .shipment-icon-container {
+            max-width: 21px;
+            max-height: 20px;
+            margin-inline-end: 8px;
+        }
+
+        .shipment-btn {
+            padding-inline-start: 20px;
+
+            button.btn-action-sp {
+                background: #DDD8D8 0% 0% no-repeat padding-box;
+                box-shadow: 0px 1px 1px #0000000d;
+                border-radius: 5px;
+                width: auto;
+                padding: 2px 19px;
+                letter-spacing: 0px;
+                color: #505459;
+                font-size: 11px;
+            }
+        }
+    }
+}

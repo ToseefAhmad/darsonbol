@@ -1,0 +1,26 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+$white: #fff;
+$black: #000;
+$default-primary-base-color: #000;
+$default-primary-dark-color: darken($default-primary-base-color, 15%);
+$default-primary-light-color: lighten($default-primary-base-color, 15%);
+$default-secondary-base-color: #505459;
+$default-secondary-dark-color: darken($default-secondary-base-color, 15%);
+$default-secondary-light-color: lighten($default-secondary-base-color, 15%);
+$default-special-color: #5A8A89;
+$font-muli: 'TheSansArab-Light', sans-serif;
+$font-muli_plain: 'TheSansArab-Plain', sans-serif;
+$font-muli_bold: 'TheSansArab-Bold', sans-serif;
+$font-muli_black: 'TheSansArab-Black', sans-serif;
+$font-standard-size: 62.5%;
+$font-fruiger-light: 'frutiger-arabic-light', sans-serif;

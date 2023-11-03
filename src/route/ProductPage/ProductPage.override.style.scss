@@ -1,0 +1,626 @@
+.ProductPage {
+    [aria-label="تفاصيل المنتج الرئيسية"] {
+        > .ContentWrapper {
+            max-width: 1120px;
+            padding-inline: 15px;
+            display: flex;
+
+            @include desktop {
+                padding-block-start: 5px;
+            }
+
+            @include mobile {
+                flex-wrap: wrap;
+                padding-inline: 0px;
+
+                .ProductActions {
+                    padding-inline-end: 15px;
+
+                    @include mobile {
+                        position: initial;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        margin-block-start: -18px;
+                        overflow: hidden;
+                        background-color: #fff;
+                        z-index: 999;
+                        padding-block-start: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ContentWrapper {
+        .ProductGallery {
+            @include desktop {
+                height: auto;
+
+                .Main_Slider_Image {
+                    direction: ltr;
+
+                    > div {
+                        img {
+                            + div {
+                                position: absolute;
+                                inset-block-start: 0px;
+                                width: 100%;
+                                inset-inline-end: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            margin-inline: 0px;
+            width: 45%;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            .ProductGallery-Additional {
+                .CarouselScroll {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ProductActions {
+            width: 55%;
+
+            @include mobile {
+                width: 100%;
+                padding-inline-start: 15px;
+            }
+
+            padding-inline-start: 35px;
+        }
+    }
+
+    .ProductReviews {
+        .ProductReviews-Summary {
+            p {
+                font-size: 12px;
+                font-family: $font-muli;
+                color: #707070;
+                padding-block: 5px;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+@include mobile {
+    section.PDP_Header_section {
+        position: fixed;
+        z-index: 23;
+        inset-block-start: 0px;
+        width: 100%;
+        inset-inline-end: 0px;
+        padding: 10px 12px 0px;
+
+        .Back_button {
+            background-color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            width: 45px;
+            height: 45px;
+            box-shadow: 0px 3px 6px #00000059;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            z-index: 24;
+        }
+
+        .Product_Actions {
+            > div {
+                background-color: #ffffff;
+                border-radius: 50%;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                box-shadow: 0px 3px 6px #00000059;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+            
+            .Mini_Cart_button {
+                .Header-MinicartItemCount {
+                    inset-inline-end: auto;
+                    inset-inline-start: 0px;
+                    inset-block-start: 0px;
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    .Header.Header_name_pdp {
+        display: none;
+    }
+
+    .ProductPage {
+        padding-block-end: 40px;
+        margin-inline: 0px;
+
+        > section {
+            > .ProductTabs-Wrapper {
+                padding-inline: 15px;
+            }
+        }
+
+        .ContentWrapper {
+            padding-inline: 0;
+
+            .ProductAttributes-Content {
+                padding-block: 10px;
+
+                .ExpandableContent-Button {
+                    .ExpandableContent-Heading {
+                        font: normal normal bold 17px/27px $font-muli-bold;
+                        letter-spacing: -0.41px;
+                        color: #000000;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .ProductReviews {
+                .ContentWrapper {
+                    .ExpandableContent {
+                        .ExpandableContent-Button {
+                            .ExpandableContent-Heading {
+                                font: normal normal bold 17px/27px $font-muli-bold;
+                                letter-spacing: -0.41px;
+                                color: #000000;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ProductGallery {
+                height: auto;
+                margin-block-end: 0px;
+
+                .ProductGallery-SliderWrapper {
+                    .ProductGallery-Slider {
+                        .Slider-Wrapper {
+                            .react-transform-component {
+                                .react-transform-element {
+                                    .Image {
+                                        .Image-Image {
+                                            position: initial;
+                                            object-fit: fill;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .Slider-Crumbs {
+                            inset-block-end: 30px;
+
+                            .Slider-Image {
+                                .Slider-Crumb {
+                                    border: 1px solid #5a8a89;
+                                    background-color: #bbbbbb;
+                                }
+
+                                .Slider-Crumb_isActive {
+                                    background-color: #5a8a89;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ProductActions-AddToCartFixed {
+            border: 1px solid #707070;
+            background-color: #f2f0f0;
+            z-index: 102;
+            transform: none;
+            inset-block-end: 0px;
+            align-items: center;
+            padding: 8px 10px;
+
+            .Field-Wrapper.Field-Wrapper_type_number {
+                display: none;
+            }
+
+            .Button.AddToCart {
+                width: 100%;
+                border-radius: 5px;
+                max-width: 230px;
+                margin-inline-start: auto;
+                height: 40px;
+
+                span {
+                    display: inline;
+                    font-size: 17px;
+                    font-family: "TheSansArab-Bold";
+                    font-weight: 900;
+                    padding-inline-start: 10px;
+                }
+            }
+
+            .configrationOption-conatiner {
+                width: 100%;
+                max-width: 230px;
+                margin-inline-start: auto;
+
+                .ProductActions-AddToCart.AddToCart {
+                    width: 100%;
+                    border-radius: 5px;
+                    height: 40px;
+
+                    span {
+                        display: inline;
+                        font-size: 17px;
+                        font-family: "TheSansArab-Bold";
+                        font-weight: 900;
+                        padding-inline-start: 10px;
+                    }
+                }
+            }
+        }
+
+        .ProductActions-Schema {
+            min-width: auto;
+
+            .ProductActions-PriceWrapper {
+                .ProductActions-PriceWrapper {
+                    .ProductPrice {
+                        line-height: normal;
+
+                        &.ProductPrice_hasDiscount {
+                            .ProductPrice-Price {
+                                .ProductPrice-PriceValue {
+                                    span {
+                                        color: #d81401;
+                                    }
+                                }
+                            }
+                        }
+
+                        .ProductPrice-Price {
+                            padding-block-end: 0px;
+
+                            .ProductPrice-PriceValue {
+                                margin: 0;
+                                font: normal normal 23px $font-muli-bold;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                opacity: 1;
+
+                                .pricevalue {
+                                    font-weight: 900;
+                                    font-family: $font-muli_bold;
+                                    margin-inline-end: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        [aria-label="علامات تبويب المنتج"] {
+            .ProductAttributes-Content {
+                .ExpandableContent-Content {
+                    .ProductAttributes-AttributeBlock {
+                        .ProductAttributes-Group {
+                            font-size: 12px;
+                            font-family: $font-muli;
+                            padding-block: 0px;
+                        }
+
+                        .ProductAttributes-Attributes {
+                            .ProductAttributes-AttributeLabel {
+                                font-size: 12px;
+                                font-family: $font-muli;
+                                color: #707070;
+                                padding-block: 5px;
+                                border-bottom: none;
+                            }
+
+                            .ProductAttributes-ValueLabel {
+                                padding-block: 5px;
+                                border-bottom: none;
+
+                                .ProductAttributeValue {
+                                    font-size: 12px;
+                                    font-family: $font-muli;
+                                    color: #707070;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            > .ProductTabs-Wrapper {
+                .ExpandableContent {
+                    .ExpandableContent-Button {
+                        &::after {
+                            content: url(../../style/icons/category/Path37601.svg);
+                            opacity: 0.5;
+                            margin-inline-end: 8px;
+                        }
+
+                        &.ExpandableContent-Button_isContentExpanded {
+                            &::after {
+                                transform: rotate(270deg);
+                            }
+                        }
+
+                        > .AddIcon {
+                            display: none;
+                        }
+
+                        > .MinusIcon {
+                            display: none;
+                        }
+
+                        .ExpandableContent-Heading {
+                            font: normal normal bold 17px $font-muli_bold;
+                            letter-spacing: -0.41px;
+                            color: #000000;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Breadcrumbs {
+    > .ContentWrapper {
+        max-width: 1120px;
+        padding-inline: 15px;
+    }
+}
+
+@include desktop {
+    .ProductPage {
+        .ProductPage-Wrapper {
+            .ProductGallery-Additional {
+                margin-inline-end: 22px;
+
+                .CarouselScrollArrow {
+                    position: absolute;
+                    inset-inline-end: 0px;
+                    inset-block-end: 0px;
+                    width: 100%;
+                    background-color: #ffffff;
+
+                    .ChevronIcon {
+                        width: 20px;
+                    }
+
+                    &.CarouselScrollArrow_isNextArrow {
+                        inset-inline-end: 0px;
+                        inset-block-start: 0px;
+                        width: 100%;
+                        background-color: #ffffff;
+                    }
+
+                    .ChevronIcon_direction_right {
+                        transform: rotate(270deg);
+                    }
+
+                    .ChevronIcon_direction_left {
+                        transform: rotate(270deg);
+                    }
+                }
+
+                .CarouselScroll {
+                    margin-block-start: 0px;
+                    overflow: hidden;
+
+                    .CarouselScroll-ContentWrapper {
+                        height: var(--carousel-height);
+
+                        .CarouselScroll-Content {
+                            flex-direction: column;
+                            transform: translateY(var(--translateY));
+                            transform: translatex();
+
+                            .CarouselScrollItem {
+                                flex: auto;
+                                width: 96px;
+                                height: 128px;
+
+                                &.CarouselScrollItem_isActive {
+                                    .ProductGalleryThumbnailImage {
+                                        border: 0.5px solid #5a8a89;
+                                    }
+                                }
+
+                                .ProductGalleryThumbnailImage {
+                                    padding: 0px 0% 0% 0px;
+
+                                    .Image-Image {
+                                        object-fit: fill;
+                                        position: initial;
+                                    }
+                                }
+
+                                + .CarouselScrollItem {
+                                    margin-block-start: var(--carousel-scroll-gap);
+                                    margin-inline-start: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html {
+    .ProductPage {
+        .ProductLinks {
+            @include mobile {
+                margin-block-start: 0px;
+            }
+
+            .ProductLinks-Wrapper {
+                .ProductLinks-Title {
+                    @include mobile {
+                        padding-inline: 20px;
+                    }
+
+                    padding: 0px 0px 20px;
+                    margin: 0px;
+                }
+
+                .ProductLinks-List {
+                    display: block;
+
+                    .react-multi-carousel-list {
+                        button {
+                            z-index: 5;
+                        }
+
+                        margin-inline: -8px;
+
+                        @include mobile {
+                            margin-inline: 8px;
+                        }
+
+                        .carousel-item-padding-px {
+                            padding-inline: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product__view {
+    @include mobile {
+        .Header-Wrapper {
+            display: none;
+        }
+
+        .promomsg_view {
+            display: none;
+        }
+
+        .SizeChartPopup {
+            inset-block: 0px;
+            height: 100%;
+            z-index: 1000;
+
+            .Popup-Content {
+                .Popup-CloseBtn {
+                    inset-block-start: 0px;
+                    inset-inline-end: 0px;
+                }
+            }
+        }
+    }
+}
+
+.headerscroll-fixed {
+    @include mobile {
+        .ProductPage {
+            .ProductActions {
+                .PDP_Header_section {
+                    background-color: #ffffff;
+                    padding-block-end: 10px;
+
+                    .promomsg_view {
+                        display: inline-block;
+                        text-align: center;
+
+                        .proname {
+                            font-size: 12px;
+                            font-family: $font-muli-bold;
+                        }
+
+                        .protxt {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .Mini_Cart_button {
+                        display: none;
+                    }
+
+                    .PDP_Wishlist_Button {
+                        box-shadow: none;
+                    }
+
+                    .Back_button {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+
+    .InitConfig {
+        z-index: -5;
+        filter: blur(4px);
+    }
+
+    .ReactModal__Overlay--after-open {
+        padding-inline: 20px;
+
+        .ReactModal__Content {
+            > button {
+                width: 100%;
+            }
+
+            .filterhead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .txtfilhd {
+                    text-align: start;
+                }
+
+                .txtfiltracors {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .ProductActions-AttributesWrapper {
+                margin-inline-start: 0px;
+
+                .ProductConfigurableAttributes {
+                    .ProductConfigurableAttributes-Title {
+                        margin-block-start: 10px;
+                        background-color: #f9f9f9;
+                        padding: 15px 20px;
+                        margin-inline: -20px;
+                    }
+
+                    .size {
+                        .size_paragraph {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

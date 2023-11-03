@@ -1,0 +1,15 @@
+.footer-wrapper {
+    border-top: 1px solid #E4E2E4;
+    opacity: 1;
+    margin: 22px 10px 0 10px;
+    padding-block-start: 22px;
+    padding-block-end: 22px;
+
+    .footer-title {
+        font: normal normal 300 12px/20px $font-muli;
+        letter-spacing: 0px;
+        color: #888D92;
+        padding-block-end: 10px;
+    }
+}
+

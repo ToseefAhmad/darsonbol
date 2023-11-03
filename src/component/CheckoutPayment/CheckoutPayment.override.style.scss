@@ -1,0 +1,41 @@
+.CheckoutPayment {
+    // TODO style the element
+    border-top: 1px solid var(--checkout-payment-method-border-color);
+
+    &-Button {
+        .Field {
+            margin-block-start: 10px;
+        }
+
+        .Field_type_radio {
+            .Field-RadioLabel {
+                font-weight: bold;
+            }
+
+            .input-control {
+                background-color: #F9F9F9;
+                border: 1px solid var(--checkout-my-account-color);
+                position: relative;
+                margin-inline-end: 30px;
+            }
+        }
+    }
+
+    &-Button_isSelected {
+        .Field-RadioLabel {
+            color: var(--special-color);
+            text-decoration: underline;
+        }
+
+        .Field [type='radio']:checked + .input-control::after {
+            content: ' \25CF';
+            font-size: 30px;
+            color: var(--color-black);
+            box-shadow: none;
+            background: unset;
+            transform: unset;
+            inset-block-start: -93%;
+            inset-inline-start: -6%;
+        }
+    }
+}

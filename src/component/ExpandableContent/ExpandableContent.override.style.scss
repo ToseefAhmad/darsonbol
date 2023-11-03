@@ -1,0 +1,9 @@
+.ExpandableContent {
+    // TODO style the element
+
+    &-Heading,
+    &-SubHeading {
+        color: var(--secondary-base-color);
+        text-decoration: underline;
+    }
+}

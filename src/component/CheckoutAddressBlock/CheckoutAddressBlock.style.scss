@@ -1,0 +1,47 @@
+.CheckoutAddressBlock {
+    // TODO style the element
+
+    &-Card {
+        border: 1px solid var(--special-color);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        @include desktop {
+            width: 300px;
+            margin-inline: auto;
+        }
+    }
+
+    &-CardDetails {
+        div {
+            padding-block: 10px;
+            align-items: flex-start;
+            display: flex;
+        }
+    }
+
+    &-Title {
+        span {
+            background-color: var(--checkout-my-account-color);
+            padding: 5px 15px;
+            color: var(--secondary-base-color);
+            font-size: 11px;
+            box-shadow: 0 1px 1px #0000000D;
+        }
+    }
+
+    &-Name {
+        color: var(--color-black);
+    }
+
+    &-Label {
+        inset-inline-start: 30px;
+        background-color: var(--special-color);
+        padding: 5px 15px;
+        color: #fff;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,167 @@
+.Breadcrumbs {
+    padding-block-end: 10px;
+
+    .ContentWrapper {
+        max-width: 1120px;
+        width: 100%;
+        padding-inline: 15px;
+    }
+}
+
+.MyAccount {
+    .ContentWrapper {
+        display: flex;
+        grid-template-columns: initial;
+        grid-template-rows: initial;
+        grid-column-gap: initial;
+        grid-row-gap: initial;
+        max-width: 1120px;
+        width: 100%;
+        padding-inline: 15px;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+
+    .MyAccount-Sidebar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 318px;
+
+        @include mobile {
+            max-width: 100%;
+            margin-block-end: 30px;
+        }
+
+        .MyAccountInfo {
+            padding: 20px 28px;
+
+            .MyAccountInfo-Info {
+                margin-block-end: 18px;
+
+                .infoname {
+                    font-size: 23px;
+                    color: #11171F;
+                    letter-spacing: 0px;
+                    padding-block-end: 0px;
+                }
+
+                .infoemail {
+                    font-size: 17px;
+                    letter-spacing: 0px;
+                    color: #11171F;
+                }
+            }
+
+            .Button {
+                font-size: 15px;
+                letter-spacing: 0px;
+                color: #505459;
+                font-weight: normal;
+                height: 42px;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        .ExpandableContent {
+            .ExpandableContent-Content {
+                ul {
+                    .MyAccountTabListItem {
+                        border-bottom: 0.5px solid #DDDDDD;
+
+                        .MyAccountTabListItem-Button {
+                            min-width: 100%;
+                            padding: 17px 28px;
+                        }
+                    }
+
+                    .MyAccountTabListItem_isActive {
+                        .MyAccountTabListItem-Button {
+                            font-family: $font-muli_bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .MyAccount-TabContent {
+        width: 100%;
+        padding-block: 0px;
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+        max-width: 672px;
+        margin-inline-start: auto;
+        border: 0px;
+        background: transparent;
+
+        .MyAccount-Heading {
+            display: none;
+        }
+
+        .MyAccountDashboard {
+            .MyAccountDashboard-CustomerData {
+                .MyAccountCustomerTable {
+                    text-align: end;
+
+                    .KeyValueTable-Wrapper {
+                        text-align: start;
+
+                        .KeyValueTable {
+                            thead {
+                                .KeyValueTable-Heading {
+                                    font-family: $font-muli_bold;
+                                    font-weight: normal;
+                                    padding: 10px 0px 30px;
+                                }
+                            }
+
+                            tbody {
+                                tr {
+                                    th {
+                                        padding: 10px 0px;
+                                        width: 1%;
+                                        letter-spacing: -0.34px;
+                                        color: #505459;
+                                        font-size: 14px;
+                                        min-width: 105px;
+                                    }
+
+                                    td {
+                                        padding: 10px 0px;
+                                        letter-spacing: -0.36px;
+                                        color: #000000;
+                                        font-weight: normal;
+                                        font-size: 14px;
+                                        font-family: $font-muli_bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .Button_isHollow {
+                        border-color: #DDD8D8;
+                        letter-spacing: 0px;
+                        color: #505459;
+                        font-size: 15px;
+                        background: #DDD8D8;
+                        box-shadow: 0px 1px 1px #0000000d;
+                        height: 30px;
+
+                        @include mobile {
+                            margin-inline-start: 10px;
+                            max-width: max-content;
+                            margin-block-end: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

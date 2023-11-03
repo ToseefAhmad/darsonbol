@@ -1,0 +1,218 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --navigation-tabs-height: calc(50px + env(safe-area-inset-bottom));
+    --navigation-tabs-background: var(--secondary-light-color);
+    --navigation-tabs-color: var(--secondary-dark-color);
+}
+
+.NavigationTabs {
+    --header-background: var(--navigation-tabs-background);
+    --header-icon-stroke-width: 2px;
+
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    z-index: 100;
+    // background-color: var(--header-background);
+    padding-block-end: env(safe-area-inset-bottom);
+    transform: translateY(0);
+    transition: transform 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 10px #00000073;
+    border-radius: 20px 20px 0px 0px;
+    opacity: 0.92;
+    height: 57px;
+
+
+    .hideOnScroll & {
+        transform: translateY(100%);
+    }
+
+
+    .nav-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    @include mobile {
+        // border-block-start: 1px solid var(--primary-divider-color);
+
+        @include desktop {
+            display: none;
+        }
+
+        &_isHidden {
+            display: none;
+
+            @at-root .hiddenNavigationTabs {
+                --navigation-tabs-height: env(safe-area-inset-bottom);
+            }
+        }
+
+        &-Nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 12px;
+            z-index: 20;
+            max-width: var(--content-wrapper-width);
+            margin: auto;
+            // height: 46px;
+            align-items: flex-start;
+
+            @include mobile {
+                padding: 0 14px;
+            }
+        }
+
+        &-Button {
+            padding-block-end: 10px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+            height: 33px;
+        }
+
+        &-Icon {
+            font-weight: bold;
+        }
+    }
+
+
+    &_isHidden {
+        display: none;
+
+        @at-root .hiddenNavigationTabs {
+            --navigation-tabs-height: env(safe-area-inset-bottom);
+        }
+    }
+
+    &-Nav {
+        // background: #FFFFFF 0% 0% no-repeat padding-box;
+        // box-shadow: 0px 0px 10px #00000029;
+        // border-radius: 20px 20px 0px 0px;
+        // opacity: 0.92;
+
+        @include mobile {
+            padding: 5px 30px 30px 30px;
+        }
+
+        .navigationTabs__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .CartIcon {
+                transform: none;
+                position: relative;
+                inset-inline-start: 11px;
+            }
+
+            .NavigationTabs-Button {
+                .Header-MinicartWrapper {
+                    height: 25px;
+                    width: 25px;
+                    display: block;
+
+                    .NavigationTabs-Icon {
+                        display: flex;
+                    }
+                    
+                    .Header-MinicartItemCount {
+                        inset-inline-end: 13px;
+                        height: 10px;
+                        width: 10px;
+                        inset-block-start: 1px;
+                        padding: 0;
+                        background: #D81401 0% 0% no-repeat padding-box;
+                        font: normal normal bold 9px/15px $font-muli-bold;
+                    }
+                }
+            }
+            
+            .mini-cart {
+                inset-inline-start: 2px;
+            }
+
+            .MenuIcon {
+                inset-inline-end: 3px;
+                inset-block-start: 2px;
+            }
+
+            .HomeIcon {
+                inset-block-start: -3px;
+            }
+
+            P {
+                font: normal normal 300 10px/16px $font-muli;
+                letter-spacing: -0.24px;
+                color: #505459;
+                opacity: 1;
+            }
+
+            &.activeClass {
+                position: relative;
+                
+                &::after {
+                    content: '';
+                    filter: blur(4px);
+                    inset-inline: 0;
+                    // inset-block-end: 0;
+                    inset: 0px;   
+                    z-index: 1;
+                    // background: #E4E2E4 0% 0% no-repeat padding-box;
+                    height: 55px;
+                    width: 55px;
+                    // background: var(--unnamed-color-e4e2e4) 0% 0% no-repeat padding-box;
+                    background: #E4E2E4 0% 0% no-repeat padding-box;
+                    opacity: 0.67;
+                    border-radius: 30px;
+                    position: absolute;
+                    margin: 0 auto;
+                    inset-block-end: 0;
+                }
+
+                p {
+                    font: normal normal 900 10px/16px TheSansArab;
+                    letter-spacing: -0.24px;
+                    color: #000000;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-Button {
+        // flex-grow: 1;
+        // height: 100%;
+        // display: inherit;
+        // justify-content: center;
+        // align-items: center;
+    }
+
+    &-Icon {
+        font-weight: bold;
+    }
+}
+
+.NavigationTabs-Nav .navigationTabs__content.activeClass svg.MenuIcon.MenuIcon_isActive,
+.NavigationTabs-Nav .navigationTabs__content.activeClass,
+.NavigationTabs-Nav .navigationTabs__content.activeClass svg.UserIcon.UserIcon_isActive,
+svg.CartIcon.CartIcon_isActive,
+.NavigationTabs-Nav .navigationTabs__content.activeClass p {
+    z-index: 9;
+}
